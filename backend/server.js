@@ -1,16 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const app = express();
-const port = 8080;
+require('dotenv').config();
+const app = require('./app');
+const port = process.env.PORT || 5000;
 const connectDB = require('./config/db');
 
+
 connectDB();
-
-// Middleware
-app.use(bodyParser.json());
-app.use(cors());
-
 
 
 app.listen(port, () => {

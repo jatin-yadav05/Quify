@@ -27,3 +27,5 @@ const delayLogs = new mongoose.Schema(
       }
     }
 )
+
+module.exports = mongoose.model('DelayLog', delayLogs);

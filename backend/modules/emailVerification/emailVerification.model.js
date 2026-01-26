@@ -7,12 +7,10 @@ const emailVerificationSchema = new mongoose.Schema(
       required: true,
       lowercase: true
     },
-
     token: {
       type: String,
       required: true
     },
-
     expiresAt: {
       type: Date,
       required: true

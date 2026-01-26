@@ -19,15 +19,21 @@ const appointmentSchema = new mongoose.Schema(
             required:true
         }, 
         timeSlot:{
-            type:String,
-            required:true
+            start: {
+               type:String,
+               required:true
+            },
+            end : {
+                type:String,
+                required:true
+            }
         }, 
         status:{
             type:String,
             enum: ['booked', 'checked-in', 'completed', 'cancelled'],
             default: 'booked'
         },
-        notes:{
+        reason:{
             type: String
         }
 
